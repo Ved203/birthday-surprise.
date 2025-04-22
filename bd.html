@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Maggie 🎂</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top right, #a2d4f4, #dbeeff);
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      animation: pop 1s ease-in-out, bounce 2s infinite;
+      color: #ff3399;
+      text-shadow: 0 0 15px #fff, 0 0 30px #ff3399, 0 0 45px #ff3399;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+    }
+
+    .nickname {
+      font-weight: bold;
+      color: #ff3399;
+    }
+
+    .shayari {
+      font-style: italic;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #222;
+      box-shadow: 0 0 20px rgba(255, 153, 204, 0.4);
+      font-family: 'Dancing Script', cursive;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    img {
+      width: 180px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #fff;
+      margin-bottom: 20px;
+    }
+
+    /* Floating hearts */
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff4d88;
+      transform: rotate(45deg);
+      animation: floatHearts 8s linear infinite;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff4d88;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    /* Stylish font for bottom text */
+    .bottom-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
+      color: #ff3399;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <!-- Generating random floating hearts -->
+    <script>
+      for (let i = 0; i < 30; i++) {
+        let heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+        heart.style.animationDelay = Math.random() * 5 + 's';
+        document.querySelector('.hearts').appendChild(heart);
+      }
+    </script>
+  </div>
+
+  <div class="container">
+    
+    <h1> Happy Birthday Maggie...❤️</h1>
+    <p>We’ve come a long way – from 1st standard to best friends forever!</p>
+    <p>Isse hi hamesha mere sath, mere pass rehna... Ly Dumeeeee ❤️🤗</p>
+
+    <div class="shayari">
+      
+      <br>
+      <p><strong>तेरी दोस्ती में कुछ तो बात है,</strong><br>
+        <strong>हर पल तू मेरे साथ है,</strong><br>
+        <strong>मस्ती तुझसे है, हँसी तुझसे है,</strong><br>
+        <strong>Gubudii... तू ही तो मेरी जान है!</strong></p>
+   
+</body>
+</html>
